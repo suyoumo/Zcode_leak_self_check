@@ -1,0 +1,4 @@
+{
+  "displayName": "ZCode Leak Audit",
+  "brief": "Scan local ZCode snapshot/upload traces and render a leak-risk HTML report ranked from severe to mild"
+}

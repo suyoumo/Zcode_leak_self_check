@@ -1,0 +1,4 @@
+{
+  "displayName": "ZCode 泄漏审计",
+  "brief": "扫描本机 ZCode 快照/上传痕迹，按夯到拉生成泄漏排名 HTML 报告"
+}
