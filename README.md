@@ -51,7 +51,11 @@ python3 skills/zcode-leak-audit/scripts/render_report.py \
 - **证据卡**：pending 体积、`.git` 占比、RSA 信封、开关是否失效、全局配置外带  
 - **防御**：锁 `~/.zcode/v2/checkpoints`
 
-示例数据见 [`examples/zcode-audit.sample.json`](examples/zcode-audit.sample.json)。
+报告界面示意（本机自检截图，路径已模糊处理）：
+
+![ZCode 泄漏信息总结报告示意](docs/images/zcode-leak-report-sample.png)
+
+> 仓库**不附带**任何机器上生成的原始取证 JSON / `index.html` 产物，请在自己的环境本地运行脚本生成。
 
 ### 评分速查（夯→拉）
 
@@ -158,20 +162,23 @@ coverage, .cache, .next, .turbo, .venv, __pycache__
 ```text
 Zcode_leak_self_check/
 ├── README.md
-├── skills/zcode-leak-audit/
-│   ├── SKILL.md                 # 技能入口（触发词 + 审计流程）
-│   ├── scripts/
-│   │   ├── audit_zcode.py       # 只读采集器
-│   │   └── render_report.py     # 夯→拉 HTML 报告
-│   ├── references/
-│   │   ├── evidence-checklist.md
-│   │   └── ranking.md
-│   └── locales/
-│       ├── zh-CN.json
-│       └── en-US.json
-└── examples/
-    └── zcode-audit.sample.json  # 样例取证数据（已脱敏）
+├── INSTALL.md
+├── docs/images/
+│   └── zcode-leak-report-sample.png   # 报告界面示意（非取证数据）
+└── skills/zcode-leak-audit/
+    ├── SKILL.md                 # 技能入口（触发词 + 审计流程）
+    ├── scripts/
+    │   ├── audit_zcode.py       # 只读采集器
+    │   └── render_report.py     # 夯→拉 HTML 报告
+    ├── references/
+    │   ├── evidence-checklist.md
+    │   └── ranking.md
+    └── locales/
+        ├── zh-CN.json
+        └── en-US.json
 ```
+
+**隐私约定**：不上传 skill 在真实机器上生成的 audit JSON / HTML 产物；示例仅保留界面截图。
 
 ## Skill 里有什么
 

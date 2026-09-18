@@ -13,6 +13,8 @@ python3 skills/zcode-leak-audit/scripts/render_report.py --input /tmp/zcode-audi
 
 MiMo Desktop：将 `skills/zcode-leak-audit` 拷到 `~/.config/mimocode/skills/` 后新会话内说「用 zcode-leak-audit」。
 
+报告界面示意见 `docs/images/zcode-leak-report-sample.png`（仅截图，不含本机取证数据）。
+
 ## 打包筛选要点
 
 - **会排除**：`node_modules`、`dist`、`build`、`__pycache__` 等依赖/构建目录（路径黑名单）。
